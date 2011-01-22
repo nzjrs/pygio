@@ -25,13 +25,8 @@
 #include <Python.h>
 #include <pyglib.h>
 #include <pygobject.h>
-#include <pyglib-python-compat.h>
 
 #include <gio/gio.h>
-
-#define PYGIO_MAJOR_VERSION PYGOBJECT_MAJOR_VERSION
-#define PYGIO_MINOR_VERSION PYGOBJECT_MINOR_VERSION
-#define PYGIO_MICRO_VERSION PYGOBJECT_MICRO_VERSION
 
 /* include any extra headers needed here */
 

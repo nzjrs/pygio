@@ -5,6 +5,7 @@ PLATFORM_VERSION = 2.0
 INCLUDES = 				\
 	-I$(top_srcdir)/glib		\
 	-I$(top_srcdir)/gobject		\
+	-I$(PYGOBJECT_INCLUDEDIR)/pyglib	\
 	$(PYTHON_INCLUDES) 		\
 	$(PYGOBJECT_CFLAGS)		\
 	$(GIO_CFLAGS)
@@ -73,10 +74,8 @@ _gio_la_SOURCES = \
 	pygio-utils.c \
 	pygio-utils.h
 nodist__gio_la_SOURCES = gio.c
-if BUILD_GIO
 pkgpyexec_LTLIBRARIES += _gio.la
 defs_DATA += $(GIO_DEFS)
-endif
 
 # giounix module
 GIOUNIX_DEFS = unix.defs unix-types.defs unix.override
@@ -97,7 +96,7 @@ endif
 # code generator
 .defs.c:
 	(cd $(srcdir)\
-	 && $(PYTHON) $(top_srcdir)/codegen/codegen.py \
+	 && $(PYTHON) $(CODEGENDIR)/codegen.py \
 	    --py_ssize_t-clean \
 	    --register gio-types.defs \
 	    --register unix-types.defs \
@@ -106,12 +105,9 @@ endif
 	&& cp $(*D)/gen-$(*F).c $(*D)/$(*F).c \
 	&& rm -f $(*D)/gen-$(*F).c
 
-
-if BUILD_GIO
 all: $(pkgpyexec_LTLIBRARIES:.la=.so)
 check-local: $(pkgpyexec_LTLIBRARIES:.la=.so)
 clean-local:
 	rm -f $(pkgpyexec_LTLIBRARIES:.la=.so)
 .la.so:
 	$(LN_S) .libs/$@ $@ || true
-endif

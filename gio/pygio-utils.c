@@ -22,7 +22,7 @@
  */
 
 #include "pygio-utils.h"
-#include <pyglib-python-compat.h>
+#include <pyglib.h>
 
 /**
  * pygio_check_cancellable:

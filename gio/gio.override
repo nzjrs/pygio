@@ -27,11 +27,10 @@ import glib.PollFD as PyGPollFD_Type
 %%
 headers
 #define NO_IMPORT_PYGOBJECT
+#include <pyglib.h>
 #include <pygobject.h>
 #include <gio/gio.h>
 #include "pygio-utils.h"
-#include "pyglib.h"
-#include "pygsource.h"
 
 #define BUFSIZE 8192
 
