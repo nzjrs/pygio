@@ -7,6 +7,7 @@ PLATFORM_VERSION = 2.0
 
 CLEANFILES =
 EXTRA_DIST = 				\
+	pygio-$(PLATFORM_VERSION).pc.in	\
 	m4/as-ac-expand.m4		\
 	m4/jhflags.m4			\
 	m4/python.m4

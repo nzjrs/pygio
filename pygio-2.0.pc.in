@@ -1,0 +1,20 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+includedir=@includedir@
+datarootdir=@datarootdir@
+datadir=@datadir@
+libdir=@libdir@
+
+# you can use the --variable=pygtkincludedir argument to
+# pkg-config to get this value.  You might want to use this to
+# install additional headers.
+pygtkincludedir=${includedir}/pygtk-2.0
+
+# same here.  Useful when calling the code generator in addon packages.
+defsdir=${datadir}/pygio/2.0/defs
+
+Name: PyGio
+Description: Python bindings for GIO
+Requires: pygobject-2.0
+Version: @VERSION@
+Cflags: -I${pygtkincludedir}
