@@ -1,0 +1,34 @@
+<Project xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:gnome="http://api.gnome.org/doap-extensions#"
+         xmlns="http://usefulinc.com/ns/doap#">
+
+  <name xml:lang="en">PyGio</name>
+  <shortdesc xml:lang="en">Python bindings for GIO</shortdesc>
+  <homepage rdf:resource="http://live.gnome.org/PyGio" />
+  <mailing-list rdf:resource="http://www.daa.com.au/mailman/listinfo/pygtk" />
+  <category rdf:resource="http://api.gnome.org/doap-extensions#bindings" />
+
+  <maintainer>
+    <foaf:Person>
+      <foaf:name>Gustavo J Carneiro</foaf:name>
+      <foaf:mbox rdf:resource="mailto:gjc@gnome.org" />
+      <gnome:userid>gjc</gnome:userid>
+    </foaf:Person>
+  </maintainer>
+  <maintainer>
+    <foaf:Person>
+      <foaf:name>Paul Pogonyshev</foaf:name>
+      <foaf:mbox rdf:resource="mailto:pogonyshev@gmx.net" />
+      <gnome:userid>paulp</gnome:userid>
+    </foaf:Person>
+  </maintainer>
+  <maintainer>
+    <foaf:Person>
+      <foaf:name>Gian Mario Tagliaretti</foaf:name>
+      <foaf:mbox rdf:resource="mailto:gianmt@gnome.org" />
+      <gnome:userid>gianmt</gnome:userid>
+    </foaf:Person>
+  </maintainer>
+</Project>
