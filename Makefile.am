@@ -1,7 +1,7 @@
 ACLOCAL_AMFLAGS = -I m4
 AUTOMAKE_OPTIONS = 1.7
 
-SUBDIRS = gio
+SUBDIRS = . gio
 
 PLATFORM_VERSION = 2.0
 
@@ -16,6 +16,11 @@ BUILT_EXTRA_DIST = 		\
 	ChangeLog
 
 INCLUDES = $(PYTHON_INCLUDES) $(GLIB_CFLAGS)
+
+# pkg-config files
+pkgconfigdir = $(libdir)/pkgconfig
+pkgconfig_DATA =
+pkgconfig_DATA += pygio-$(PLATFORM_VERSION).pc
 
 .PHONY: ChangeLog
 

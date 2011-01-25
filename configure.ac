@@ -222,6 +222,7 @@ fi
 
 AC_CONFIG_FILES(
   Makefile
+  pygio-2.0.pc
   gio/Makefile)
 AC_OUTPUT
 
