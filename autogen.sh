@@ -7,7 +7,7 @@ srcdir=`cd $srcdir && pwd`
 
 REQUIRED_AUTOMAKE_VERSION=1.8
 
-PKG_NAME="PyGTK"
+PKG_NAME="pygio"
 ACLOCAL_FLAGS="-I $srcdir/m4 $ACLOCAL_FLAGS"
 
 #name of package
