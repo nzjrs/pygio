@@ -18,7 +18,7 @@ defs_DATA =
 pyexec_LTLIBRARIES =
 
 # gio extension modules
-pkgpyexecdir = $(pyexecdir)/gtk-2.0/gio
+pkgpyexecdir = $(pyexecdir)/gio
 pkgpyexec_LTLIBRARIES =
 
 # gio python scripts
