@@ -62,7 +62,7 @@ GIO_OVERRIDES = 			\
 	gvolume.override		\
 	gvolumemonitor.override
 
-GIO_DEFS = gio.defs gio-types.defs $(GIO_OVERRIDES)
+GIO_DEFS = gio.defs gio-types.defs
 CLEANFILES += gio.c
 EXTRA_DIST += $(GIO_DEFS) $(GIO_OVERRIDES)
 gio.c: $(GIO_DEFS) $(GIO_OVERRIDES)
@@ -78,7 +78,7 @@ pkgpyexec_LTLIBRARIES += _gio.la
 defs_DATA += $(GIO_DEFS)
 
 # giounix module
-GIOUNIX_DEFS = unix.defs unix-types.defs unix.override
+GIOUNIX_DEFS = unix.defs unix-types.defs
 CLEANFILES += unix.c
 EXTRA_DIST += $(GIOUNIX_DEFS) unix.override
 unix.c: $(GIOUNIX_DEFS) unix.override
