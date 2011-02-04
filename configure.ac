@@ -146,6 +146,8 @@ AM_PATH_GLIB_2_0(glib_required_version,,[AC_MSG_ERROR(gobject is required to bui
 if test -n "$export_dynamic"; then
   GLIB_LIBS=`echo $GLIB_LIBS | sed -e "s/$export_dynamic//"`
 fi
+PYTHON_BASENAME=`basename $PYTHON`
+AC_SUBST([PYTHON_BASENAME])
 
 dnl pygobject
 PKG_CHECK_MODULES(PYGOBJECT, [pygobject-2.0 >= pygobject_required_version])
